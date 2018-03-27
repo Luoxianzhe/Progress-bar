@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>进度条5</title>
+    <script src="js/jquery.1.10.2.js"></script>
+</head>
+<style>
+    *{padding: 0;margin: 0;}
+    .loading{width:100%;height:100%;position:fixed;top:0;left:0;z-index:100;background-color:#fff}
+    .loading .pic{width:100px;height:100px;position:absolute;top:0;left:0;bottom: 0;right: 0;margin: auto;line-height: 100px;text-align: center;font-size: 30px;}
+    .loading .pic span{display: block;width: 80px;height: 80px;position: absolute;top: 10px;left: 10px;border-radius: 50%;box-shadow: 0 3px 0 #666;-webkit-animation:rotate 1s infinite linear;animation:rotate 1s infinite linear;}
+    @-webkit-keyframes rotate{
+        0%{-webkit-transform:rotate(0deg);}
+        100%{-webkit-transform:rotate(360deg);}
+    }
+    @keyframes rotate{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+</style>
+<body>
+<div class="loading">
+    <div class="pic">
+        <span></span>
+        <b>0%</b>
+    </div>
+</div>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+<img src="http://www.yingcaibang.cn/userfiles/hkschool/20171120_153d32bf-06c4-4972-9e6e-167ac3beeb22.jpg" alt=""/>
+</body>
+<script>
+    $(function () {
+       var img=$("img");
+        var num=0;
+
+        img.each(function(i){
+            var oImage=new Image();
+            oImage.onload=function(){
+                oImage.onload=null;
+                num++;
+                $(".loading b").html(parseInt(num/$("img").size()*100));
+                if(img.length==i+1){
+                    $(".loading").fadeOut();
+                }
+            }
+            oImage.src=img[i].src;
+        })
+    })
+</script>
+</html>
